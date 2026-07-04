@@ -1,0 +1,20 @@
+{
+  "name": "mindforge",
+  "owner": {
+    "name": "Owen Crabbe"
+  },
+  "metadata": {
+    "description": "MindForge: PhD-grade thinking skills for Claude.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "mindforge",
+      "source": "./",
+      "description": "Six flagship reasoning skills: deep-research, first-principles, steelman-redteam, decision-forge, socratic-partner, and cross-pollinate.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["reasoning", "research", "critical-thinking", "decision-making"]
+    }
+  ]
+}
