@@ -1,0 +1,25 @@
+{
+  "name": "mindforge",
+  "version": "1.0.0",
+  "description": "Six PhD-grade thinking skills for Claude: deep research, first-principles decomposition, adversarial stress-testing, decision science, Socratic inquiry, and cross-disciplinary insight.",
+  "author": {
+    "name": "Owen Crabbe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "reasoning",
+    "research",
+    "critical-thinking",
+    "decision-making",
+    "skills",
+    "claude"
+  ],
+  "skills": [
+    "./skills/deep-research",
+    "./skills/first-principles",
+    "./skills/steelman-redteam",
+    "./skills/decision-forge",
+    "./skills/socratic-partner",
+    "./skills/cross-pollinate"
+  ]
+}
