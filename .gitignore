@@ -1,12 +1,14 @@
-# OS
+node_modules/
+public/
+.vercel/
 .DS_Store
+test-results/
+playwright-report/
+.env*
+!.env.example
 Thumbs.db
-
-# Editors
 .vscode/
 .idea/
 *.swp
-
-# Logs / temp
 *.log
 tmp/

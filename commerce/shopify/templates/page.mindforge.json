@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "founder": {
+      "type": "mindforge-founder",
+      "settings": {
+        "brand_name": "Phroneme",
+        "show_newsletter": true
+      }
+    }
+  },
+  "order": ["founder"]
+}

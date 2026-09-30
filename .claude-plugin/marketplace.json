@@ -4,17 +4,17 @@
     "name": "Owen Crabbe"
   },
   "metadata": {
-    "description": "MindForge: PhD-grade thinking skills for Claude.",
-    "version": "1.0.0"
+    "description": "MindForge: scoped reasoning protocols and general fitness evidence literacy for Claude.",
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "mindforge",
       "source": "./",
-      "description": "Six flagship reasoning skills: deep-research, first-principles, steelman-redteam, decision-forge, socratic-partner, and cross-pollinate.",
-      "version": "1.0.0",
+      "description": "Seven reasoning and evidence-reading skills, with a public source catalog and an evaluation protocol. No measured outcome gains are claimed.",
+      "version": "2.0.0",
       "category": "productivity",
-      "keywords": ["reasoning", "research", "critical-thinking", "decision-making"]
+      "keywords": ["reasoning", "research", "critical-thinking", "decision-making", "fitness-education"]
     }
   ]
 }

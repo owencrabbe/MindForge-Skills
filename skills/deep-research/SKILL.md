@@ -1,7 +1,7 @@
 ---
 name: deep-research
 description: >-
-  Runs a rigorous, PhD-grade research investigation on any question and returns
+  Runs a source-linked research investigation and returns
   a structured, citation-backed synthesis instead of a shallow summary. Use this
   skill whenever the user wants to "research," "dig into," "find the literature
   on," "get up to speed on," "write a report on," "do a deep dive," "review the
@@ -49,11 +49,11 @@ interpretation in one line and proceed. Do not stall.
 
 ### 2. Gather widely, then deeply
 
-Cast a wide net first, then follow the strongest threads down. Use every
-research tool available in the environment: web search, and any connected
-specialist sources (academic databases, preprint servers, clinical registries,
-market data, internal documents). Check what is connected before assuming a
-source is unavailable.
+Cast a wide net first, then follow the strongest threads down. Use suitable
+public tools, such as web search, academic databases, preprint servers, or
+clinical registries. Use connected private sources only when they are within
+the user's authorized task. Account access does not itself authorize collecting
+private health information or republishing internal material.
 
 Principles that separate real research from search-and-paste:
 
@@ -141,3 +141,13 @@ mostly from one lab" than to manufacture false confidence. If the research does
 not support a clean answer, say so plainly and explain why. A user who trusts
 that you will tell them when the ground is soft will trust everything else you
 say. That trust is the entire product.
+
+## Evidence and fitness boundary
+
+Separate what a source says from what you infer. For consequential factual
+claims, retain the source URL, page or study date, population, outcome and
+limitations. A citation ID or matching number is not proof that the source
+supports the whole claim. If suitable evidence is unavailable, state that
+limitation rather than fill the gap with a verdict. For health questions, read
+[the shared evidence boundary](../_references/evidence-and-fitness.md) and use
+the fitness-evidence method for general evidence literacy.

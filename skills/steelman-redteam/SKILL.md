@@ -109,3 +109,12 @@ their thinking harder than the world will. But stay fair: the red team must hit
 the steelman, not a caricature. An attack that only works against a weak version
 of the idea is a waste of everyone's time. Real strength on both sides is what
 makes the exercise worth doing.
+
+## Evidence and fitness boundary
+
+Mark whether each attack is supported evidence, a plausible failure mode, or
+an untested hypothesis. Do not manufacture support for a steelman just to make
+it stronger. When reviewing fitness content, separate a founder's experience
+from population evidence or product efficacy; include implied claims made by
+images and before/after framing. Apply
+[the shared evidence boundary](../_references/evidence-and-fitness.md).

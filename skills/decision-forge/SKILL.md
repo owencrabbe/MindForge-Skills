@@ -123,3 +123,12 @@ option is fine and the real cost is continuing to deliberate. In that case, the
 right counsel is often to pick the more reversible option and move. Deciding well
 and deciding forever are different things; help the user do the first without
 demanding the second.
+
+## Evidence and fitness boundary
+
+Label subjective criteria and weights as judgments. Use numeric probabilities
+only when their source or explicit assumption is visible, and test whether
+reasonable changes would reverse the recommendation. For a fitness reflection,
+compare low-stakes planning choices the user has proposed; do not calculate a
+personal calorie target, supplement dose or medical risk from sparse inputs.
+Apply [the shared evidence boundary](../_references/evidence-and-fitness.md).

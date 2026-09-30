@@ -1,0 +1,14 @@
+{
+  "name": "mindforge-fitness-lab",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-linked reasoning skills and a browser-local fitness reflection workspace.",
+  "engines": { "node": ">=24 <27" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "verify": "npm test && npm run build"
+  }
+}

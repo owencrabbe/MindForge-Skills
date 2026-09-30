@@ -1,0 +1,182 @@
+{%- liquid
+  assign tool_url = section.settings.tool_url
+  assign featured_product = section.settings.featured_product
+  assign email_id = 'MindForgeEmail-' | append: section.id
+  assign form_id = 'MindForgeNewsletter-' | append: section.id
+  assign founder_alt = section.settings.founder_image.alt | default: section.settings.image_alt
+  assign brand_name = section.settings.brand_name | default: 'Phroneme'
+  assign video_label = 'mindforge.founder.video_label' | t: brand: brand_name
+-%}
+
+<section class="mf-founder" aria-labelledby="MindForgeHeading-{{ section.id }}">
+  <div class="mf-founder__inner">
+    <div class="mf-founder__intro">
+      <p class="mf-founder__eyebrow">{{ 'mindforge.founder.eyebrow' | t: brand: brand_name }}</p>
+      <h2 id="MindForgeHeading-{{ section.id }}">{{ 'mindforge.founder.heading' | t }}</h2>
+      <p class="mf-founder__lead">{{ 'mindforge.founder.lead' | t: brand: brand_name }}</p>
+      {%- if tool_url != blank -%}
+        <a class="mf-founder__button" href="{{ tool_url | escape }}">{{ 'mindforge.founder.tool_cta' | t }}</a>
+      {%- endif -%}
+    </div>
+
+    <div class="mf-founder__story">
+      {%- if section.settings.founder_video != blank -%}
+        <div class="mf-founder__media">
+          {{ section.settings.founder_video | video_tag: controls: true, autoplay: false, loop: false, preload: 'metadata', image_size: '1100x', class: 'mf-founder__video', aria-label: video_label }}
+        </div>
+        {%- if section.settings.video_transcript != blank -%}
+          <details class="mf-founder__transcript">
+            <summary>{{ 'mindforge.founder.transcript_label' | t }}</summary>
+            <p>{{ section.settings.video_transcript | escape | newline_to_br }}</p>
+          </details>
+        {%- endif -%}
+      {%- elsif section.settings.founder_image != blank -%}
+        <div class="mf-founder__media">
+          {{ section.settings.founder_image | image_url: width: 1400 | image_tag: widths: '400, 700, 1000, 1400', sizes: '(min-width: 900px) 42vw, 100vw', alt: founder_alt, loading: 'lazy', class: 'mf-founder__image' }}
+        </div>
+      {%- endif -%}
+      <div class="mf-founder__story-copy">
+        <p class="mf-founder__eyebrow">{{ 'mindforge.founder.story_label' | t }}</p>
+        <h3>{{ 'mindforge.founder.story_heading' | t }}</h3>
+        <p>{{ 'mindforge.founder.story_body' | t: brand: brand_name }}</p>
+        <p class="mf-founder__note">{{ 'mindforge.founder.story_note' | t }}</p>
+        <p class="mf-founder__signature">{{ 'mindforge.founder.signature' | t: brand: brand_name }}</p>
+      </div>
+    </div>
+
+    <div class="mf-founder__practice" aria-labelledby="MindForgePractice-{{ section.id }}">
+      <h3 id="MindForgePractice-{{ section.id }}">{{ 'mindforge.practice.heading' | t }}</h3>
+      <ol class="mf-founder__steps">
+        <li><h4>{{ 'mindforge.practice.choose_title' | t }}</h4><p>{{ 'mindforge.practice.choose_body' | t }}</p></li>
+        <li><h4>{{ 'mindforge.practice.plan_title' | t }}</h4><p>{{ 'mindforge.practice.plan_body' | t }}</p></li>
+        <li><h4>{{ 'mindforge.practice.review_title' | t }}</h4><p>{{ 'mindforge.practice.review_body' | t }}</p></li>
+      </ol>
+    </div>
+
+    {%- if featured_product != blank -%}
+      <div class="mf-founder__product">
+        {%- if featured_product.featured_image != blank -%}
+          {{ featured_product.featured_image | image_url: width: 600 | image_tag: widths: '300, 450, 600', sizes: '(min-width: 700px) 220px, 100vw', loading: 'lazy', class: 'mf-founder__product-image' }}
+        {%- endif -%}
+        <div>
+          <p class="mf-founder__eyebrow">{{ 'mindforge.product.label' | t }}</p>
+          <h3>{{ featured_product.title | escape }}</h3>
+          <a class="mf-founder__button mf-founder__button--light" href="{{ featured_product.url }}">{{ 'mindforge.product.cta' | t }}</a>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.show_newsletter -%}
+      <div class="mf-founder__newsletter" aria-labelledby="MindForgeNewsletterHeading-{{ section.id }}">
+        <div>
+          <p class="mf-founder__eyebrow">{{ 'mindforge.newsletter.label' | t }}</p>
+          <h3 id="MindForgeNewsletterHeading-{{ section.id }}">{{ 'mindforge.newsletter.heading' | t }}</h3>
+          <p>{{ 'mindforge.newsletter.description' | t: brand: brand_name }}</p>
+        </div>
+        {%- form 'customer', id: form_id, class: 'mf-founder__form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter,mindforge">
+          <label for="{{ email_id }}">{{ 'mindforge.newsletter.email_label' | t }}</label>
+          <div class="mf-founder__form-row">
+            <input id="{{ email_id }}" type="email" name="contact[email]" autocomplete="email" autocorrect="off" autocapitalize="off" required aria-describedby="MindForgeConsent-{{ section.id }}{% if form.errors %} MindForgeError-{{ section.id }}{% endif %}"{% if form.errors %} aria-invalid="true"{% endif %}>
+            <button class="mf-founder__button" type="submit">{{ 'mindforge.newsletter.cta' | t }}</button>
+          </div>
+          <p id="MindForgeConsent-{{ section.id }}" class="mf-founder__note">{{ 'mindforge.newsletter.consent' | t: brand: brand_name }}</p>
+          {%- if shop.privacy_policy.url != blank -%}
+            <a class="mf-founder__policy" href="{{ shop.privacy_policy.url }}">{{ 'mindforge.newsletter.privacy' | t }}</a>
+          {%- endif -%}
+          {%- if form.errors -%}
+            <div id="MindForgeError-{{ section.id }}" class="mf-founder__message" role="alert">{{ form.errors | default_errors }}</div>
+          {%- endif -%}
+          {%- if form.posted_successfully? -%}
+            <p class="mf-founder__message" role="status">{{ 'mindforge.newsletter.success' | t: brand: brand_name }}</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .mf-founder {
+    --mf-ink: #202321;
+    --mf-paper: #f6f2e8;
+    --mf-accent: #b64a25;
+    --mf-line: #d1cbbc;
+    background: var(--mf-paper);
+    color: var(--mf-ink);
+    padding: clamp(2.5rem, 7vw, 7rem) 1.5rem;
+    font-family: inherit;
+  }
+  .mf-founder *, .mf-founder *::before, .mf-founder *::after { box-sizing: border-box; }
+  .mf-founder__inner { max-width: 1160px; margin-inline: auto; }
+  .mf-founder h2, .mf-founder h3, .mf-founder h4, .mf-founder p { margin: 0; color: inherit; }
+  .mf-founder h2 { max-width: 850px; font-size: clamp(2.7rem, 6.8vw, 5.6rem); line-height: 1.02; letter-spacing: -0.055em; font-weight: 700; }
+  .mf-founder h3 { font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.15; letter-spacing: -0.035em; }
+  .mf-founder h4 { font-size: 1.25rem; line-height: 1.3; font-weight: 650; }
+  .mf-founder p { line-height: 1.65; }
+  .mf-founder__eyebrow { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.1rem !important; }
+  .mf-founder__lead { max-width: 660px; font-size: clamp(1.1rem, 2vw, 1.4rem); margin-top: 1.6rem !important; }
+  .mf-founder__button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.5rem; background: var(--mf-accent); color: #fff; border: 2px solid var(--mf-accent); border-radius: 3px; padding: 0.8rem 1.3rem; font: inherit; font-weight: 650; line-height: 1.4; text-decoration: none; cursor: pointer; }
+  .mf-founder__intro > .mf-founder__button { margin-top: 1.7rem; }
+  .mf-founder__button:hover { background: #913b1e; border-color: #913b1e; }
+  .mf-founder a:focus-visible, .mf-founder button:focus-visible, .mf-founder input:focus-visible, .mf-founder summary:focus-visible { outline: 3px solid var(--mf-accent); outline-offset: 4px; }
+  .mf-founder__story { display: grid; grid-template-columns: 1fr; gap: 2rem; border-top: 1px solid var(--mf-line); margin-top: clamp(3rem, 6vw, 5rem); padding-top: clamp(2rem, 5vw, 4rem); }
+  .mf-founder__story:has(.mf-founder__media) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+  .mf-founder__story:has(.mf-founder__media) .mf-founder__story-copy { grid-column: 2; grid-row: 1; }
+  .mf-founder__media { min-width: 0; }
+  .mf-founder__image, .mf-founder__video { display: block; width: 100%; height: auto; border-radius: 3px; }
+  .mf-founder__image { aspect-ratio: 4 / 5; object-fit: cover; }
+  .mf-founder__story-copy { max-width: 690px; }
+  .mf-founder__story-copy > p:not(.mf-founder__eyebrow) { margin-top: 1.2rem; }
+  .mf-founder__note { font-size: 0.85rem; line-height: 1.55 !important; }
+  .mf-founder__signature { font-weight: 700; }
+  .mf-founder__transcript { grid-column: 1; font-size: 0.95rem; }
+  .mf-founder__transcript summary { cursor: pointer; min-height: 32px; }
+  .mf-founder__transcript p { margin-top: 0.8rem; }
+  .mf-founder__practice { padding-top: clamp(3rem, 6vw, 5rem); }
+  .mf-founder__steps { list-style: decimal-leading-zero; margin: 1.7rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  .mf-founder__steps li { list-style-position: inside; padding-top: 1rem; border-top: 1px solid var(--mf-line); }
+  .mf-founder__steps li::marker { color: var(--mf-accent); font-size: 0.9rem; font-weight: 700; }
+  .mf-founder__steps h4 { margin-top: 0.8rem; }
+  .mf-founder__steps p { margin-top: 0.7rem; }
+  .mf-founder__product { display: flex; align-items: center; gap: 2rem; background: var(--mf-ink); color: var(--mf-paper); border-radius: 3px; padding: 2rem; margin-top: 3rem; }
+  .mf-founder__product-image { width: 220px; max-width: 35%; height: auto; border-radius: 3px; }
+  .mf-founder__product .mf-founder__button { margin-top: 1.2rem; }
+  .mf-founder__button--light { background: var(--mf-paper); border-color: var(--mf-paper); color: var(--mf-ink); }
+  .mf-founder__button--light:hover { background: #e9e1d0; border-color: #e9e1d0; }
+  .mf-founder__newsletter { border-top: 1px solid var(--mf-line); margin-top: clamp(3rem, 6vw, 5rem); padding-top: 2.5rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+  .mf-founder__newsletter > div > p:not(.mf-founder__eyebrow) { margin-top: 1rem; max-width: 490px; }
+  .mf-founder__form label { display: block; margin-bottom: 0.5rem; font-weight: 650; }
+  .mf-founder__form-row { display: flex; gap: 0.7rem; align-items: stretch; }
+  .mf-founder__form input[type="email"] { border: 1px solid #777b72; background: #fff; color: var(--mf-ink); border-radius: 3px; width: 100%; min-width: 0; min-height: 48px; padding: 0.8rem; font: inherit; }
+  .mf-founder__form .mf-founder__note { margin-top: 0.8rem; }
+  .mf-founder__policy { color: inherit; font-size: 0.85rem; display: inline-block; margin-top: 0.45rem; }
+  .mf-founder__message { margin-top: 1rem !important; padding: 1rem; border: 1px solid var(--mf-ink); border-radius: 3px; }
+  @media (max-width: 699px) {
+    .mf-founder { padding-inline: 1.15rem; }
+    .mf-founder__story:has(.mf-founder__media), .mf-founder__steps, .mf-founder__newsletter { grid-template-columns: 1fr; }
+    .mf-founder__story:has(.mf-founder__media) .mf-founder__story-copy { grid-column: auto; grid-row: auto; }
+    .mf-founder__form-row { flex-direction: column; }
+    .mf-founder__product { align-items: flex-start; flex-direction: column; padding: 1.5rem; }
+    .mf-founder__product-image { width: 100%; max-width: 280px; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:mindforge.section.name",
+  "tag": "section",
+  "class": "mindforge-section",
+  "settings": [
+    { "type": "text", "id": "brand_name", "label": "t:mindforge.settings.brand_name", "default": "Phroneme" },
+    { "type": "url", "id": "tool_url", "label": "t:mindforge.settings.tool_url", "info": "t:mindforge.settings.tool_info" },
+    { "type": "image_picker", "id": "founder_image", "label": "t:mindforge.settings.founder_image" },
+    { "type": "text", "id": "image_alt", "label": "t:mindforge.settings.image_alt", "default": "Owen Crabbe" },
+    { "type": "video", "id": "founder_video", "label": "t:mindforge.settings.founder_video", "info": "t:mindforge.settings.video_info" },
+    { "type": "textarea", "id": "video_transcript", "label": "t:mindforge.settings.transcript" },
+    { "type": "product", "id": "featured_product", "label": "t:mindforge.settings.featured_product", "info": "t:mindforge.settings.product_info" },
+    { "type": "checkbox", "id": "show_newsletter", "label": "t:mindforge.settings.show_newsletter", "default": true }
+  ],
+  "presets": [{ "name": "t:mindforge.section.name" }]
+}
+{% endschema %}
