@@ -98,3 +98,12 @@ domain, because a solution that has survived millions of years of evolution or
 a century of engineering carries a kind of proof with it. And always land the
 plane: end with a concrete, testable move, because the point of the exercise is
 not to admire the connection but to *use* it.
+
+## Evidence and fitness boundary
+
+A mechanism that works in its original domain supplies a hypothesis, not proof
+that it works in the target domain. Identify which quantities and assumptions
+actually transfer and name a way to test the transfer. Do not use evolution,
+optimization or business analogies as evidence of a health intervention's
+safety or efficacy. Apply
+[the shared evidence boundary](../_references/evidence-and-fitness.md).

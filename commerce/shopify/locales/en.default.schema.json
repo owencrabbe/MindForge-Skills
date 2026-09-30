@@ -1,0 +1,18 @@
+{
+  "mindforge": {
+    "section": { "name": "Founder and practice" },
+    "settings": {
+      "brand_name": "Public brand name",
+      "tool_url": "Weekly planner link",
+      "tool_info": "Choose the verified, public planner URL. The button stays hidden until a destination is set.",
+      "founder_image": "Owen’s photo",
+      "image_alt": "Photo description",
+      "founder_video": "Owen’s introduction video",
+      "video_info": "An uploaded video takes priority over the photo. Use a captioned video and provide a transcript below.",
+      "transcript": "Video transcript",
+      "featured_product": "Journal product",
+      "product_info": "Select the journal after its product page and delivery are ready. The product area stays hidden until selected.",
+      "show_newsletter": "Show email signup"
+    }
+  }
+}

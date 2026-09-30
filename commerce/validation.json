@@ -1,0 +1,339 @@
+{
+  "checkedAt": "2026-09-30T04:59:14.000Z",
+  "tool": "Bundled Shopify Liquid validate.mjs using @shopify/theme-check-* 3.24.0",
+  "baselineRepository": "https://github.com/owencrabbe/phroneme-shopify",
+  "baselineRevision": "c74c6e74d099ef6ff90d76f0110efdcc0691436f",
+  "scope": "Full theme copied to temporary directory; integration installed locally; all Liquid/JSON/CSS/JS files requested for validation",
+  "fullThemeFileCount": 50,
+  "result": {
+    "success": true,
+    "responses": [
+      {
+        "result": "success",
+        "resultDetail": "assets/base.css passed all checks.",
+        "artifactId": "artifact-834beb30-3c80-4d0e-8256-378cddf81787",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "assets/theme.js passed all checks.",
+        "artifactId": "artifact-0f720e58-4d9f-4514-b996-df5b3af503c9",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "config/settings_data.json passed all checks.",
+        "artifactId": "artifact-aa294524-4caf-4549-813f-cb573139e995",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "config/settings_schema.json passed all checks.",
+        "artifactId": "artifact-28e8e170-2399-4e5b-adf3-987876aae17f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "layout/theme.liquid passed all checks.",
+        "artifactId": "artifact-63c8c1ff-ceed-4c39-a1c8-7c0792fadcec",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "locales/en.default.json passed all checks.",
+        "artifactId": "artifact-96665737-83ea-4c8b-b715-7cbd57a50b7a",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "locales/en.default.schema.json passed all checks.",
+        "artifactId": "artifact-44148fc6-88b4-4ebd-afb2-5b91d97e58d8",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/announcement-bar.liquid passed all checks.",
+        "artifactId": "artifact-9041ba8e-debc-4df9-ba81-c908666a1e7d",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/email-capture.liquid passed all checks.",
+        "artifactId": "artifact-546a3dd8-c5c0-404f-a34b-9e944e667213",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/evidence-standard-preview.liquid passed all checks.",
+        "artifactId": "artifact-01725027-e377-473a-86fd-e6cf1dd8c2f9",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/featured-products.liquid passed all checks.",
+        "artifactId": "artifact-070fd88a-a685-403c-8e98-a0f4ca65403e",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/footer-group.json passed all checks.",
+        "artifactId": "artifact-8b80fa60-6d5b-484e-88de-8a43816b3406",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/footer.liquid passed all checks.",
+        "artifactId": "artifact-7927b0d6-c704-4ded-8850-8aae168053ae",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/header-group.json passed all checks.",
+        "artifactId": "artifact-a346f827-9d41-4de6-bf76-a339ed54c04f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/header.liquid passed all checks.",
+        "artifactId": "artifact-76f08759-fa4c-443a-a91f-47a28c2d662f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/hero.liquid passed all checks.",
+        "artifactId": "artifact-13c32508-729e-489c-a927-64728a4d8501",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-404.liquid passed all checks.",
+        "artifactId": "artifact-bc4c70fa-5f9e-49c6-a67a-da7d91e07af8",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-article.liquid passed all checks.",
+        "artifactId": "artifact-35210b34-28fa-45bf-af0c-13a84855db24",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-blog.liquid passed all checks.",
+        "artifactId": "artifact-099d0f47-42ed-44d9-b4ba-14590be02e52",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-cart.liquid passed all checks.",
+        "artifactId": "artifact-6b404a6e-327e-40a5-a8c8-ceda9ae3f413",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-collection.liquid passed all checks.",
+        "artifactId": "artifact-5824730e-8803-4073-b8fa-aed40e582bd6",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-list-collections.liquid passed all checks.",
+        "artifactId": "artifact-7092a0cf-9460-4131-82db-24378034924f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-page.liquid passed all checks.",
+        "artifactId": "artifact-ea284a14-23db-42b8-9dc9-295bdaa1257d",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-product.liquid passed all checks.",
+        "artifactId": "artifact-25571ca6-9f91-4c3c-881c-c841ea293cc1",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/main-search.liquid passed all checks.",
+        "artifactId": "artifact-781e8fb7-12ef-4e02-a961-6597fa6e4aa5",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/mindforge-founder.liquid passed all checks.",
+        "artifactId": "artifact-ea5c95bc-7212-4df2-9e37-a2e936458a7a",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/powered-by-phroneme.liquid passed all checks.",
+        "artifactId": "artifact-161a15f1-bbff-457d-90a1-234cfe077a10",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/protocol-selector.liquid passed all checks.",
+        "artifactId": "artifact-af33d5f1-1660-48cc-8ca0-16bd03481ce6",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/rich-text.liquid passed all checks.",
+        "artifactId": "artifact-5c63be7f-6303-47d7-b432-f7ee0e0a8b78",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/routine-collections.liquid passed all checks.",
+        "artifactId": "artifact-03314eac-92d7-41f2-98fa-ddf936b01217",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "sections/three-step.liquid passed all checks.",
+        "artifactId": "artifact-cf7adbd5-731b-4ec9-8c51-20d56e24a945",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/css-variables.liquid passed all checks.",
+        "artifactId": "artifact-b91f29da-10ba-4c7f-823f-94f18ee113fd",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/evidence-card.liquid passed all checks.",
+        "artifactId": "artifact-ec2b4314-4582-48ae-a59c-343ac04769c9",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/icon.liquid passed all checks.",
+        "artifactId": "artifact-a8710dd3-ba52-478e-9c3f-4858de4a0ddd",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/meta-tags.liquid passed all checks.",
+        "artifactId": "artifact-2d02c870-ef7b-4d62-b128-4b6430c776ed",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/price.liquid passed all checks.",
+        "artifactId": "artifact-f15eb1e5-ba31-442f-abe9-8fc28dc3badf",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/product-card.liquid passed all checks.",
+        "artifactId": "artifact-2ba2e51d-d897-4171-9595-99c3a0ed0f48",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/404.json passed all checks.",
+        "artifactId": "artifact-ac2f2abe-8abd-47c7-b23e-272c32a656e9",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/article.json passed all checks.",
+        "artifactId": "artifact-bf815e06-a5d9-4e5b-a927-1eae7572e15f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/blog.json passed all checks.",
+        "artifactId": "artifact-4619150e-3178-47bf-96ab-f1812a446275",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/cart.json passed all checks.",
+        "artifactId": "artifact-d21479ca-96d5-458b-99cc-b34d21460c40",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/collection.json passed all checks.",
+        "artifactId": "artifact-92394977-5d31-4f9b-afde-7b845ccdcb5b",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/gift_card.liquid passed all checks.",
+        "artifactId": "artifact-7a55a307-169f-4a0a-9ba6-b0bea06c961f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/index.json passed all checks.",
+        "artifactId": "artifact-3a352733-2ba5-47d0-956f-ca6e11937a97",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/list-collections.json passed all checks.",
+        "artifactId": "artifact-4e9edc81-faa2-4ec4-9253-2094711248b9",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/page.json passed all checks.",
+        "artifactId": "artifact-c518e4e0-bf56-483b-80b2-df83798b24e7",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/page.mindforge.json passed all checks.",
+        "artifactId": "artifact-cdccddb9-7527-4a2c-8080-c1e05922c838",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/page.protocol.json passed all checks.",
+        "artifactId": "artifact-c796a1f2-a491-482c-99a4-c016ac2a00c0",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/product.json passed all checks.",
+        "artifactId": "artifact-ad993108-bb85-4b8a-b932-1ff1685ef74f",
+        "artifactRevision": 1
+      },
+      {
+        "result": "success",
+        "resultDetail": "templates/search.json passed all checks.",
+        "artifactId": "artifact-42dda0fb-bef0-49c7-8c2d-f6a426e0c50d",
+        "artifactRevision": 1
+      }
+    ]
+  },
+  "installerChecks": {
+    "dryRun": "PASS: reported changes without applying",
+    "apply": "PASS: installed four files into temporary theme",
+    "idempotence": "PASS: second identical installation reported already identical",
+    "existingLocaleTopLevelKeysPreserved": true,
+    "existingHomepageUnchanged": true
+  },
+  "sourceSha256": {
+    "README.md": "3928c5b4fb6a5e3ded3af861a4bd636f148c0e5316c88193ee60a0bff99e4228",
+    "product-draft.json": "11ffca27f48542380d3e1eb6dd245c37a70d76c692846da7da42f0e956b9d085",
+    "digital/weekly-journal.html": "f7d7b80c3e31e83746a91378ed6cd3dc4fd0463d960de09eac64e9c46f41fc1f",
+    "digital/weekly-journal.md": "4499157f9aa8bd403a0f61332a6e312058dbf443034a18471069ad3088ff490b",
+    "shopify/install.mjs": "6ba3a4bbfde99b446a09b0b26c7b23a297d71a2e59e7f01328b7da7beedbb2e2",
+    "shopify/locales/en.default.json": "84e0845972697e9283a562e8e16a8968464c776c5e78283089a5f417331963dd",
+    "shopify/locales/en.default.schema.json": "347c1dad530ae3b836d75c9cfd8de5e081df30988f021e5f5642df024c1cd244",
+    "shopify/sections/mindforge-founder.liquid": "b4833b8a2b5ce2f375cb778f97c4dec7264a728955f65d9f5ff17186da772b64",
+    "shopify/templates/page.mindforge.json": "2706c22692447467bacfc747ae5b75e7955685e56c8829d8999b2f10dbf50a1a"
+  },
+  "notVerified": [
+    "remote store identity and theme role",
+    "remote theme rendering and responsive browser behavior",
+    "real Shopify newsletter submission and marketing consent",
+    "digital file delivery",
+    "checkout",
+    "public planner destination after deployment"
+  ]
+}

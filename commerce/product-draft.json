@@ -1,0 +1,15 @@
+{
+  "status": "DRAFT",
+  "title": "Phroneme weekly practice journal",
+  "handle": "phroneme-weekly-practice-journal",
+  "productType": "Digital planning journal",
+  "vendor": "Phroneme",
+  "descriptionHtml": "<p>A reusable journal for choosing one action, making a realistic weekly plan, and reflecting on what happened.</p><h2>What is included</h2><ul><li>A printable HTML worksheet.</li><li>An editable Markdown worksheet.</li><li>Space for your action, timing, fallback, daily observations, and weekly review.</li></ul><h2>How to use it</h2><ol><li>Choose one action you want to make room for.</li><li>Give it a time or cue and a realistic fallback.</li><li>Record what happened and choose one change for next week.</li></ol><h2>What this tool provides</h2><p>This is a planning and reflection worksheet. It does not provide a training prescription, nutrition plan, diagnosis, or individualized medical advice. It has not been evaluated as a health intervention and makes no promise about weight, appearance, fitness, or other health outcomes.</p><h2>Your notes</h2><p>Your completed journal stays with you. There is no requirement to submit it or share personal health information.</p>",
+  "deliveryAssets": ["digital/weekly-journal.html", "digital/weekly-journal.md"],
+  "unresolvedBeforeSale": [
+    "Confirm the exact Shopify store and customer-facing identity.",
+    "Approve whether this is a free download or a paid product and set any price.",
+    "Configure and test real digital-file delivery.",
+    "Confirm support, download/refund terms, and privacy policy."
+  ]
+}

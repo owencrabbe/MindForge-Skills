@@ -113,3 +113,12 @@ intimidated by a cost, a timeline, or a "you can't do that," that is precisely
 the moment this skill is most valuable, because those barriers are inherited far
 more often than they are bedrock. Help the user see which wall is real and which
 is painted on.
+
+## Evidence and fitness boundary
+
+Distinguish definitions and mathematical constraints from empirical
+observations, assumptions and hypotheses. A health study's finding is not an
+irreducible law: keep its population, outcome, uncertainty and scope visible.
+Do not discard established individual constraints merely because a different
+approach sounds simpler. In health and fitness contexts, apply
+[the shared evidence boundary](../_references/evidence-and-fitness.md).

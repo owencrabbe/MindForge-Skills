@@ -1,132 +1,67 @@
-<div align="center">
+# MindForge
 
-# 🧠 MindForge
+Structured reasoning skills for Claude, a reviewed evidence contract, and the browser-local **Phroneme Fitness Lab**. Built by Owen Crabbe.
 
-### Six PhD-grade thinking skills for Claude. Reason like the top 1%, on any problem.
+The original six methods remain available. Version 2 adds a fitness evidence-reading skill, executable provenance checks, failure fixtures, and a working weekly activity journal. The Phroneme application lives in a separate repository; this repository contains the reusable open-source skills and Fitness Lab implementation.
 
-MindForge turns Claude into a genuine thinking partner — not a faster search box.
-Each skill encodes a distinct mode of elite reasoning: rigorous research, first-principles
-decomposition, adversarial stress-testing, decision science, Socratic inquiry, and
-cross-disciplinary insight.
+## Try the product
 
-**Install once. Think sharper forever.**
+- [Phroneme Fitness Lab](https://www.phroneme.com/fitness-lab/index.html): choose activities and days, record completion, reflect, export JSON or a printable journal, and delete the browser copy.
+- [Fitness direction and founder context](https://www.phroneme.com/fitness): Owen’s personally reported 240 lb to 175 lb journey, clearly separate from product efficacy.
+- [Owen’s project portfolio](https://owencrabbe.com).
 
-[Install](#-install) · [The Skills](#-the-six-skills) · [Examples](#-see-it-in-action) · [How Skills Work](#-how-it-works) · [Contribute](#-contributing)
+The journal saves to local storage on the same browser profile and device. It has no backend, analytics client, model call, Shopify synchronization, or mailing-list submission. Shared browser users can access that copy; clearing site data removes it. Exported files are under the user’s control.
 
-⭐ **If MindForge sharpens your thinking, star the repo — it helps others find it.**
+The evidence explorer is a small reviewed library of general-adult activity guidance. Its **library wording check is deterministic**, matching curated wording and checking declared provenance. A match is not independent verification of scientific truth or personal suitability. Unknown wording returns insufficient evidence. Nothing in this repository establishes improved reasoning, weight loss, or other health outcomes.
 
-</div>
+## Install the Claude plugin
 
----
+In Claude Code:
 
-## Why MindForge
-
-Out of the box, an AI assistant will happily give you a fast, confident, plausible answer.
-That is exactly the problem. The most consequential thinking — deciding, researching,
-arguing, choosing what to build — does not reward fast and plausible. It rewards rigor,
-honesty about uncertainty, and the discipline to attack your own ideas before the world does.
-
-MindForge installs that discipline. These are not prompts. They are **skills**: structured
-methodologies Claude loads automatically when the moment calls for them, distilled from how
-the strongest researchers, strategists, and decision-makers actually think. Every skill was
-written to one standard — the output should survive scrutiny from an expert in the field.
-
-## 🔧 Install
-
-MindForge is a Claude Code plugin. Add the marketplace and install in two commands:
-
-```bash
+```text
 /plugin marketplace add owencrabbe/MindForge-Skills
 /plugin install mindforge
 ```
 
-That's it. All six skills are now available and will trigger automatically when relevant.
+Skills also work as standalone SKILL.md files in a compatible skills directory. Refer to the [official Claude plugin reference](https://code.claude.com/docs/en/plugins-reference) for installation and discovery behavior.
 
-**Prefer manual use?** Every skill is a single self-contained `SKILL.md` in [`skills/`](skills/).
-Copy any one into your own `.claude/skills/` directory, or paste its contents directly into a
-conversation. No dependencies, no setup.
+| Method | Purpose |
+| --- | --- |
+| [deep-research](skills/deep-research/SKILL.md) | Frame an investigation, assess sources, report uncertainty and limitations. |
+| [first-principles](skills/first-principles/SKILL.md) | Separate definitions, observations, assumptions, and hypotheses. |
+| [steelman-redteam](skills/steelman-redteam/SKILL.md) | Build a strong case, test its vulnerable assumptions, and retain what survives. |
+| [decision-forge](skills/decision-forge/SKILL.md) | Compare options using explicit criteria, uncertainty, and a pre-mortem. |
+| [socratic-partner](skills/socratic-partner/SKILL.md) | Help the user inspect their own reasoning through focused questions. |
+| [cross-pollinate](skills/cross-pollinate/SKILL.md) | Transfer a structural analogy and propose a way to test it. |
+| [fitness-evidence](skills/fitness-evidence/SKILL.md) | Read general fitness evidence with claim/source boundaries and avoid personal medical prescriptions. |
 
-## 🎯 The Six Skills
+## Run and verify
 
-| Skill | What it does | Triggers when you say |
-|-------|-------------|----------------------|
-| 🔬 **[deep-research](skills/deep-research/SKILL.md)** | Multi-source, citation-backed investigation that grades its own evidence and admits what it doesn't know | *"research this,"* *"what does the evidence say,"* *"deep dive on…"* |
-| ⚛️ **[first-principles](skills/first-principles/SKILL.md)** | Strips a problem to bedrock truths and rebuilds it, exposing the inherited assumption doing the damage | *"why do we even do it this way,"* *"reason this from scratch,"* *"break this down"* |
-| ⚔️ **[steelman-redteam](skills/steelman-redteam/SKILL.md)** | Builds the strongest version of an idea, then attacks it to its breaking point — and tells you what survives | *"poke holes in this,"* *"pressure-test my plan,"* *"what am I missing"* |
-| ⚖️ **[decision-forge](skills/decision-forge/SKILL.md)** | Turns a hard choice into options, criteria, probabilities, a pre-mortem, and a clear recommendation | *"should I,"* *"torn between,"* *"help me decide"* |
-| 💬 **[socratic-partner](skills/socratic-partner/SKILL.md)** | Sharpens *your* reasoning through pointed questions instead of handing you answers | *"be my thinking partner,"* *"challenge me,"* *"help me think through"* |
-| 🌐 **[cross-pollinate](skills/cross-pollinate/SKILL.md)** | Imports solved problems from distant fields to crack yours — structural transfer, not shallow metaphor | *"fresh angle on this,"* *"how would biology solve this,"* *"I'm stuck"* |
+Node.js 24 is used in CI. There are no npm dependencies.
 
-Each is deliberately narrow and deep. Together they cover the core operations of serious
-thought: **learn, decompose, attack, decide, question, connect.**
+```sh
+npm run verify
+npm start
+# http://127.0.0.1:4320
+claude plugin validate .
+```
 
-## 👀 See It In Action
+npm test exercises evidence failures, calendar and completion behavior, malformed storage, export integrity, and escaping. npm run build copies the portable app, evidence catalog, and libraries to public/. The same bundle can be mounted at /fitness-lab/ on the Phroneme site.
 
-**Instead of a confident guess, `deep-research` gives you a graded verdict:**
+Passing fixtures establish the tested software contracts. A controlled comparison of model outputs and any study of behavior or health outcomes remain **NOT RUN**. See [the evaluation protocol](evidence/EVALUATION.md) and [source catalog](evidence/catalog.mjs).
 
-> **You:** *Is intermittent fasting actually better than plain calorie restriction for fat loss?*
->
-> **MindForge:** *Bottom line — controlled trials that match calorie intake show no meaningful
-> fat-loss advantage for fasting over continuous restriction; the benefit people see is almost
-> entirely adherence, not metabolism. Confidence: moderate-high, based on several RCTs and two
-> meta-analyses. Biggest caveat: most trials run under 6 months… [full evidence breakdown +
-> graded sources follow]*
+## Evidence and commerce boundaries
 
-**Instead of agreeing with your plan, `steelman-redteam` finds the flaw before your investors do:**
+Fitness library source records carry a source ID, publisher, public URL, review date, review deadline, active status, and scoped relationships to reviewed claim records. An overdue source stops a catalog-valid result until editorial review. This does not establish that the original guidance became false.
 
-> **You:** *Pressure-test my plan to undercut competitors on price to win market share.*
->
-> **MindForge:** *Steelman first — here's the strongest case for price-led entry… Now the
-> red team: your load-bearing assumption is that share won on price is defensible. It usually
-> isn't — the same customers leave for the next discounter, and you've now anchored your brand
-> and trained the market to wait for cuts. Verdict: survives only if you have a structural cost
-> advantage rivals can't match. Do you? …*
+The six reasoning skills and new fitness skill share [an evidence contract](skills/_references/evidence-and-fitness.md). They do not automatically collect customer journals or private health records for research. General educational guidance must retain population and applicability limits.
 
-**Instead of a metaphor, `cross-pollinate` hands you a testable move:**
+Shopify assets in [commerce/](commerce/) are separately installable theme components and draft product copy. A real product, destination, store selection, and commerce readiness are required before purchase links or offers become active. The journal does not select products from health inputs. Founder experience is not a product outcome guarantee.
 
-> **You:** *I'm stuck on reducing customer churn.*
->
-> **MindForge:** *Abstracted, this is a leaking-reservoir problem where the leak rate depends
-> on each unit's own state — which is exactly epidemiology's problem. Their move: don't treat
-> all leavers equally, find the super-spreaders of churn (accounts whose exit triggers others)
-> and stop those first. Concretely: map which cancellations cluster and precede others…*
+## Contribute
 
-## 🧩 How It Works
+See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions should include a bounded use case, limitations, and meaningful failure fixtures where executable behavior changes. Results from model comparisons should publish budgets, task selection, rubric, failure cases, and null results as well as favorable outcomes.
 
-A **skill** is a folder with a `SKILL.md` file: a name, a description of when to use it, and a
-body of methodology. Claude reads the descriptions of all available skills and pulls the full
-methodology into context only when a task calls for it — so you get expert-level structure
-exactly when it's relevant, and zero overhead when it isn't.
+## License
 
-MindForge skills share three design principles:
-
-- **Explain the *why*, not just the *what*.** Modern models reason best when they understand
-  the purpose behind a step. These skills teach a method, they don't just bark orders.
-- **Honesty over confidence.** Every skill is built to flag uncertainty, name what's contested,
-  and tell you when the ground is soft. A tool you can trust to say "I don't know" is a tool
-  you can trust.
-- **End with something usable.** Research ends with a verdict, decisions end with a
-  recommendation, analogies end with a testable move. No admiring the problem.
-
-Want to build your own? See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## 🤝 Contributing
-
-MindForge is open source and built to grow. New thinking skills, sharper methodologies, and
-real-world examples are all welcome. The bar is simple: a skill has to make Claude *think
-better*, not just talk longer. See [CONTRIBUTING.md](CONTRIBUTING.md) for the guidelines and
-the skill template.
-
-## 📄 License
-
-[MIT](LICENSE) — use it, fork it, build on it, ship it.
-
----
-
-<div align="center">
-
-**Built for people who think for a living.**
-
-⭐ Star the repo · 🍴 Fork it · 🧠 Think sharper
-
-</div>
+[MIT](LICENSE). Reuse the source with its license. Personal founder context does not grant rights to impersonate Owen or invent endorsements.

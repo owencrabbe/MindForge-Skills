@@ -1,0 +1,40 @@
+{
+  "mindforge": {
+    "founder": {
+      "eyebrow": "{{ brand }} · By Owen Crabbe",
+      "heading": "Build a week you can follow.",
+      "lead": "Tools for thinking clearly, choosing one useful action, and reflecting on what happened. Follow my fitness journey as I build {{ brand }} in public.",
+      "tool_cta": "Open the weekly planner",
+      "story_label": "My personal journey",
+      "story_heading": "240 lb to 175 lb.",
+      "story_body": "I’m Owen. I went from 240 lb to 175 lb and now have visible abs. {{ brand }} is where I’m bringing my interest in clear thinking together with my health and fitness journey.",
+      "story_note": "This is my personal experience. It is not a promise of someone else’s results.",
+      "signature": "Owen Crabbe · Founder, {{ brand }}",
+      "video_label": "Owen Crabbe introduces {{ brand }}",
+      "transcript_label": "Read the video transcript"
+    },
+    "practice": {
+      "heading": "A simple weekly practice.",
+      "choose_title": "Choose one focus",
+      "choose_body": "Name the action you want to make room for this week. Keep it concrete enough to observe.",
+      "plan_title": "Give it a place",
+      "plan_body": "Choose a time and a realistic fallback. Fit the plan around the week you actually have.",
+      "review_title": "Learn from the week",
+      "review_body": "Write down what happened, what got in the way, and one change to try next. Your notes belong to you."
+    },
+    "product": {
+      "label": "Take the practice with you",
+      "cta": "See the journal"
+    },
+    "newsletter": {
+      "label": "Stay in the loop",
+      "heading": "Follow the next chapter.",
+      "description": "Get {{ brand }} notes on planning, reflection, new tools, and my fitness journey.",
+      "email_label": "Email address",
+      "cta": "Subscribe",
+      "consent": "By subscribing, you agree to receive {{ brand }} marketing emails. You can unsubscribe at any time. This form collects your email address, not your journal entries.",
+      "privacy": "Privacy policy",
+      "success": "Thanks for subscribing. You’re on the {{ brand }} list."
+    }
+  }
+}
